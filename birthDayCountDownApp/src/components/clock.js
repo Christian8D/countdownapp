@@ -77,6 +77,10 @@ class Clock extends Component {
         }, 1000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }    
+
     render() {  
         const data = this.state.timeRemaining
         return (
@@ -97,4 +101,3 @@ class Clock extends Component {
 }
 
 export default Clock;
-
